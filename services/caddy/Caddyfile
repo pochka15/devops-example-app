@@ -10,7 +10,18 @@ localhost, devops-example.test {
 		reverse_proxy app:3000
 	}
 
+	reverse_proxy {
+		to app:3000
+
+		@error status 502 # Только 502 ошибки
+		handle_response @error {
+			root * /app/services/caddy/error_pages
+			rewrite * /502.html
+			file_server
+		}
+	}
+
 	log {
-		format single_field common_log
+		format json
 	}
 }
