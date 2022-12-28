@@ -1,4 +1,4 @@
-https://207.154.242.174 {
+207.154.242.174.nip.io {
 	tls internal
 
 	handle /images/* {
