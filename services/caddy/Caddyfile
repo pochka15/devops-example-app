@@ -2,7 +2,7 @@
 	auto_https off
 }
 
-0.0.0.0, 207.154.242.174 {
+207.154.242.174 {
 	handle /images/* {
 		file_server
 		root * /app/public
