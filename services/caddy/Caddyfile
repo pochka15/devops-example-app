@@ -1,5 +1,9 @@
+{
+	auto_https off
+}
+
 localhost, 207.154.242.174 {
-	tls internal
+	// tls internal
 
 	handle /images/* {
 		file_server
@@ -13,7 +17,7 @@ localhost, 207.154.242.174 {
 	reverse_proxy {
 		to app:3000
 
-		@error status 502 # Только 502 ошибки
+		@error status 502
 		handle_response @error {
 			root * /app/services/caddy/error_pages
 			rewrite * /502.html
