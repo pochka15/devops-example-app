@@ -1,8 +1,6 @@
-{
-	auto_https off
-}
+https://207.154.242.174 {
+	tls internal
 
-http://207.154.242.174 {
 	handle /images/* {
 		file_server
 		root * /app/public
