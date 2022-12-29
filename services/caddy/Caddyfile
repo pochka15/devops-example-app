@@ -25,3 +25,7 @@
 		format json
 	}
 }
+
+:8080 {
+	status 200 /
+}

@@ -2,7 +2,7 @@
 
 - hosts: all
   gather_facts: no
-  tasks:        
+  tasks:
     - community.docker.docker_network:
         name: devops-example
 
@@ -15,6 +15,7 @@
           - name: devops-example
         env:
           NODE_ENV: production
+          SERVER_MESSAGE: "{{inventory_hostname}}"
 
     - community.docker.docker_container:
         name: caddy
