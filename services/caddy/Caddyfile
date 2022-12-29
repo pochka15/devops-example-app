@@ -27,5 +27,5 @@
 }
 
 :8080 {
-	status 200 /
+	respond "I'm alive"
 }
