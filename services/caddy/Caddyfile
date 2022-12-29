@@ -25,7 +25,3 @@
 		format json
 	}
 }
-
-:8080 {
-	respond "I'm alive"
-}
